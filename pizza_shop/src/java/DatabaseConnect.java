@@ -1,7 +1,4 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class DatabaseConnect {
 
@@ -22,7 +19,7 @@ public class DatabaseConnect {
     }
 
 
-    public static void insertUser(User user) {
+    public static void insertUser(String username, String password) {
         String sql = "INSERT INTO Usertable (username, password) VALUES (?, ?)";
         try {
             connect();
@@ -33,8 +30,8 @@ public class DatabaseConnect {
         PreparedStatement statement = null;
         try {
             statement = connection.prepareStatement(sql);
-            statement.setString(1, user.getUsername());
-            statement.setString(2, user.getPassword());
+            statement.setString(1, username);
+            statement.setString(2, password);
             statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -46,6 +43,43 @@ public class DatabaseConnect {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+
+    }
+
+    public static boolean verifyUser(String username, String password){
+        String sql = "SELECT * from Usertable WHERE username=? and password=?";
+        try {
+            connect();
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+        PreparedStatement statement = null;
+
+        try {
+            statement = connection.prepareStatement(sql);
+            statement.setString(1,username);
+            statement.setString(2,password);
+            ResultSet rs=statement.executeQuery();
+            if(rs.next()) {
+                return true;
+            }
+            else{
+                return false;
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return false;
+
 
 
     }
