@@ -24,8 +24,8 @@ public class registerServlet extends HttpServlet {
 
          String username = request.getParameter("username");
          String password = request.getParameter("password");
-         User newuser = new User(username, password);
-         DatabaseConnect.insertUser(newuser);
+        
+         DatabaseConnect.insertUser(username,password);
                  
 
     }
