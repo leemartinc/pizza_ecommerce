@@ -350,7 +350,7 @@ i.inst:hover {
     text-decoration: underline;
 }
 
-/*----*/
+/*--banner--*/
 
 /*-- agileits --*/
 
@@ -661,7 +661,6 @@ ul.callbacks_tabs.callbacks1_tabs {
 .b-animate span {
     display: block;
     font-size: 1.5em;
-    padding-top: 5em;
     display: block;
     font-weight: 500;
 }

@@ -1,0 +1,18 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280\sa240\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 import java.io.*;\uc0\u8232 import javax.servlet.*;\u8232 import javax.servlet.http.*;\
+import java.sql.*;\uc0\u8232 \
+public class hello extends HttpServlet \{\
+public static final String TITLE = "MY\\'s Login.";\
+public void doGet (HttpServletRequest request, HttpServletResponse response)\uc0\u8232 throws ServletException, IOException\u8232 \{\u8232 // set content type and other response header fields first\u8232 response.setContentType("text/html");\
+\uc0\u8232 // get the communication channel with the requesting client\u8232 PrintWriter out = response.getWriter();\
+out.println("<!DOCTYPE HTML PUBLIC \\"-//W3C//DTD HTML 3.2//EN\\">"\uc0\u8232 + "<HTML>"\u8232 + "<HEAD>"\u8232 + " <TITLE>" + TITLE + "</TITLE>"\u8232 + " <META NAME=\\"Author\\" CONTENT=\\"" +""+ "\\">"\u8232 + "</HEAD>"\u8232 + "<BODY BGCOLOR=\\"#FFFFFF\\">"\u8232 + " <CENTER>"\u8232 + " </CENTER>"\u8232 + "</BODY>"\u8232 + "</HTML>");\u8232 \}\
+\}\
+}
