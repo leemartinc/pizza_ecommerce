@@ -4,11 +4,10 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mattress A Ecommerce Category Flat Bootstrap Responsive Website Template | Products :: w3layouts</title>
+    <title>Mattress A Ecommerce Category Flat Bootstrap Responsive Website Template | single :: w3layouts</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
@@ -43,11 +42,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
     <script src="js/simpleCart.min.js">
     </script>
+    <script src="js/imagezoom.js"></script>
 </head>
 
 <body>
-    <% if (session.getAttribute("username") != null) {
-    String username = (String) session.getAttribute("username");%>
     <!--header-->
     <div class="header">
         <div class="header-top">
@@ -76,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                     <div class="ca-r">
                         <div class="cart box_1">
-                            <a href="checkout.jsp">
+                            <a href="checkout.html">
                                 <h3>
                                     <div class="total">
                                         <span class="simpleCart_total"></span> </div>
@@ -94,15 +92,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <div class="head-top">
                 <div class="logo">
-                    <h1><a href="index.jsp">Pizza</a></h1>
+                    <h1><a href="index.html">Pizza</a></h1>
                 </div>
                 <div class=" h_menu4">
                     <ul class="memenu skyblue">
-                        <li><a class="color8" href="shop.jsp">Shop</a></li>
-                        
+                        <li><a class="color8" href="index.html">Frozen</a></li>
+                        <li><a class="color1" href="#">Baked</a>
+                        </li>
+                        <li class="grid"><a class="color2" href="#">Combos</a>
+                        </li>
                         <!-- conditional if to show login or sign out-->
-                        <li><a class="color4" href="login.jsp">Login</a></li>
-                        <li><a class="color4" href="signup.jsp">Register</a></li>
+                        <li><a class="color4" href="login.html">Login</a></li>
+                        <li><a class="color4" href="login.html">Logout</a></li>
                         <!-- -->
                     </ul>
                 </div>
@@ -111,99 +112,89 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
     </div>
-    <!-- products -->
     <!-- grow -->
     <div class="grow">
         <div class="container">
-            <h2>Products</h2>
+            <h2>Single</h2>
         </div>
     </div>
     <!-- grow -->
-    <div class="pro-du">
+    <div class="product">
         <div class="container">
-            <div class="col-md-9 product1">
-                
-                
-                <!--Gotta put this in a table-->
-                <div class=" bottom-product">
-                    <div class="col-md-6 bottom-cd simpleCart_shelfItem">
-                        <div class="product-at ">
-                            <a href="single.html"><img class="img-responsive" src="images/pi3.jpg" alt="">
-							<div class="pro-grid">
-										<span class="buy-in">Buy Now</span>
-							</div>
-						</a>
+
+            <div class="product-price1">
+                <div class="top-sing">
+                    <div class="col-md-7 single-top">
+                        <div class="flexslider">
+                            <ul class="slides">
+
+
+                                <li data-thumb="images/si.jpg">
+                                    <div class="thumb-image"> <img src="images/si.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                                </li>
+                                <li data-thumb="images/si1.jpg">
+                                    <div class="thumb-image"> <img src="images/si1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                                </li>
+                                <li data-thumb="images/si2.jpg">
+                                    <div class="thumb-image"> <img src="images/si2.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                                </li>
+                                <li data-thumb="images/si3.jpg">
+                                    <div class="thumb-image"> <img src="images/si3.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                                </li>
+
+
+                            </ul>
                         </div>
-                        <p class="tun"><span>Lorem ipsum establish</span><br>CLARISSA</p>
-                        <div class="ca-rt">
-                            <a href="#" class="item_add">
-                                <p class="number item_price"><i> </i>$500.00</p>
-                            </a>
-                        </div>
-                        <div class="clearfix"></div>
+
+                        <div class="clearfix"> </div>
+                        <!-- slide -->
+
+
+                        <!-- FlexSlider -->
+                        <script defer src="js/jquery.flexslider.js"></script>
+                        <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+                        <script>
+                            // Can also be used with $(document).ready()
+                            $(window).load(function() {
+                                $('.flexslider').flexslider({
+                                    animation: "slide",
+                                    controlNav: "thumbnails"
+                                });
+                            });
+                        </script>
+
+
+
+
+
+
+
                     </div>
-                    <div class="col-md-6 bottom-cd simpleCart_shelfItem">
-                        <div class="product-at ">
-                            <a href="single.html"><img class="img-responsive" src="images/pi1.jpg" alt="">
-							<div class="pro-grid">
-										<span class="buy-in">Buy Now</span>
-							</div>
-						</a>
+                    <div class="col-md-5 single-top-in simpleCart_shelfItem">
+                        <div class="single-para ">
+                            <h4>Lorem Ipsum</h4>
+                            <div class="star-on">
+
+                                <div class="clearfix"> </div>
+                            </div>
+
+                            <h5 class="item_price">$ 500.00</h5>
+
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat </p>
+                            <a href="#" class="add-cart item_add">ADD TO CART</a>
+
                         </div>
-                        <p class="tun"><span>Lorem ipsum establish</span><br>CLARISSA</p>
-                        <div class="ca-rt">
-                            <a href="#" class="item_add">
-                                <p class="number item_price"><i> </i>$500.00</p>
-                            </a>
-                        </div>
-                        <div class="clearfix"></div>
                     </div>
                     <div class="clearfix"> </div>
                 </div>
-                <div class=" bottom-product">
-                    <div class="col-md-6 bottom-cd simpleCart_shelfItem">
-                        <div class="product-at ">
-                            <a href="single.html"><img class="img-responsive" src="images/pi5.jpg" alt="">
-							<div class="pro-grid">
-										<span class="buy-in">Buy Now</span>
-							</div>
-						</a>
-                        </div>
-                        <p class="tun"><span>Lorem ipsum establish</span><br>CLARISSA</p>
-                        <div class="ca-rt">
-                            <a href="#" class="item_add">
-                                <p class="number item_price"><i> </i>$500.00</p>
-                            </a>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="col-md-6 bottom-cd simpleCart_shelfItem">
-                        <div class="product-at ">
-                            <a href="single.html"><img class="img-responsive" src="images/pi.jpg" alt="">
-							<div class="pro-grid">
-										<span class="buy-in">Buy Now</span>
-							</div>
-						</a>
-                        </div>
-                        <p class="tun"><span>Lorem ipsum establish</span><br>CLARISSA</p>
-                        <div class="ca-rt">
-                            <a href="#" class="item_add">
-                                <p class="number item_price"><i> </i>$500.00</p>
-                            </a>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-
-
+                <!---->
             </div>
 
-
-            <div class="clearfix"></div>
+            <div class="clearfix"> </div>
         </div>
     </div>
-    <!-- products -->
+    <!--//content-->
 </body>
 </html>
 			

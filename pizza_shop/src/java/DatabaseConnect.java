@@ -10,9 +10,9 @@ public class DatabaseConnect {
 
 
     private static Connection connection;
-    private static String dbUrl = "jdbc:mysql://localhost:3306/test3";
+    private static String dbUrl = "jdbc:mysql://localhost:8889/test3";
     private static String dbUsername = "root";
-    private static String dbPassword = "";
+    private static String dbPassword = "root";
 
 
     private DatabaseConnect() {
